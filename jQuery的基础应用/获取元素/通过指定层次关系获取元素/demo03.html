@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="bootstrap-sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-sweetalert-master/dist/sweetalert.css">
+</head>
+<body>
+<form>
+    <label>子节点</label><input type="text" value="背景变红色">
+    <fieldset>
+        <label>孙节点</label><input type="text" value="背景变红色">
+    </fieldset>
+</form>
+<label>from外</label><input type="text" value="背景不变色">
+<fieldset>
+    <label>form外</label><input type="text" value="背景不变色">
+</fieldset>
+<!--（3）$('前+后')的实例-->
+<script>
+    $(function () {
+        $("label + input ").css("backgroundColor","red");
+    });
+</script>
+</body>
+</html>
