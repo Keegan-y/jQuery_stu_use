@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="bootstrap-sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-sweetalert-master/dist/sweetalert.css">
+</head>
+<ul>
+    <li>第0个的文字变红色，因为非空</li>
+    <li><h3><span>第1个li的文字</span>变红色（因为非空）</h3></li>
+    <li></li>
+<!--而不是<li>空元素</li>-->
+    <li><span>第3个li的文字变红色，因为非空</span></li>
+    <li>最后一个li的文字变红，因为非空</li>
+    <script>
+        /*
+        //（1）获取第1个元素
+        $(function () {
+            $("li:first").css("color","red");
+        });
+
+
+    //    （2）获取最后一个元素
+        $(function () {
+           $("li:last").css("color","red");
+        });
+
+
+    //    （3）获取指定元素外的元素
+        $(function () {
+            $("li:not(:first)").css("color","red");
+        });
+
+
+    //    （4）获取偶数序号的元素
+        $(function () {
+            $("li:even").css("backgroundColor","grey");
+            $("li:even").css("color","white");
+        });
+
+
+    //    （5）获取奇数序号的元素
+        $(function () {
+            $("li:odd").css("backgroundColor","grey");
+            $("li:odd").css("color","white");
+        });
+
+
+    //    （6）获取指定序号的元素
+        $(function () {
+            $("li:eq(2)").css("color","red");
+        });
+
+
+    //    （7）获取指定序号后的元素
+        $(function () {
+            $("li:gt(2)").css("color","red");
+        });
+
+
+    //    （8）获取指定序号前的元素
+        $(function () {
+            $("li:lt(2)").css("color","red");
+        });
+
+
+    //    （9）获取标题元素
+        $(function () {
+            $("li :header").css("color","red");//li空格一个：header
+        });
+
+
+    //    （10）获取动画元素
+        $(function () {
+            (function animate() {
+                $("li:eq(2)").toggle("slow",animate);//这行字会动态显示
+            })();
+            $("li:animated").css("color","red");
+        });
+
+
+    //    （11）获取包含指定字符串的元素
+        $(function () {
+            $("li:contains('红色')").css("color","red");//红色必须''单引号括起来
+        });
+
+
+        //    （12）获取空元素
+        $(function () {
+            $("li:empty").text('空元素').css("color","red");
+        });
+
+
+    //  （13）获取拥有子孙元素的元素
+        $(function () {
+            $("li:has(span)").css("color","red");
+        });
+
+         */
+    //    （14）获取非空元素
+        $(function () {
+            $("li:parent").css("color","red");
+        });
+    </script>
+</ul>
+<body>
+</body>
+</html>
