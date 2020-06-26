@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="bootstrap-sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-sweetalert-master/dist/sweetalert.css">
+</head>
+<body>
+<div>不满足条件不变色</div>
+<div id="div_test" class="class1">不满足条件不变色</div>
+<p id="p_test1" class="class1">p标签中定义的id为p开头,且class属性为class1,变红色</p>
+<p id="p_test2" class="class2">不满足条件不变色</p>
+<!--（1）获取拥有指定属性的元素-->
+<script>
+    /*
+    $(function () {
+        $("p[id]").css("color","red");
+
+    });
+//    （2）获取拥有指定属性且设定值一致的元素
+    $(function () {
+        $("div[id=div_test]").css("color","red");//效果同$("div[id]").css("color","red");
+    });
+
+
+//    （3）获取拥有指定属性且设定值不一致的元素
+    $(function () {
+        $("p[id!=p_test2]").css("color","red");
+    });
+
+
+//    （4）获取拥有指定属性且设定值的最初部分一致的元素。如p_test1，p_test2最初部分一致的元素就是p!!!最初就是开头！！！
+    $(function () {
+        $("p[id^=p]").css("color","red");
+    });
+
+//    （5）获取拥有指定属性且设定值的最后部分一致的元素。如div标签的id为div_test,满足以test结尾的条件变为红色。最后就是末尾！！！
+    $(function () {
+        $("[id$=test]").css("color","red");
+    });
+     */
+//    （6）获取拥有指定属性且设定值中包含指定字符串的元素
+    $(function () {
+        $("[id^=p][class=class1]").css("color","red");
+    });
+
+</script>
+</body>
+</html>
